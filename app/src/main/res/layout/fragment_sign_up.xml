@@ -3,90 +3,114 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background_color"
     android:layout_height="match_parent"
+    android:background="@drawable/rock_people"
     tools:context=".presentation.ui.fragments.singup.SignUpFragment">
 
-    <EditText
-        android:id="@+id/email"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:hint="email"
-        android:inputType="textEmailAddress"
-        android:textColor="#000000"
-        android:textColorHint="#403E3E"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/age"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:hint="enter_name"
-        android:padding="15dp"
-        android:textColor="@color/black"
-        android:textColorHint="#403E3E"
-        android:textSize="25sp"
+        android:layout_marginHorizontal="40dp"
+        app:cardBackgroundColor="#85FFFFFF"
+        app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:gravity="center"
-        android:hint="enter_password"
-        android:inputType="textPersonName"
-        android:padding="15dp"
-        android:textColor="@color/black"
-        android:textColorHint="#403E3E"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@id/name"
-        app:layout_constraintStart_toStartOf="@id/name"
-        app:layout_constraintTop_toBottomOf="@id/name"
-        tools:ignore="TextFields" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40FFFFFF">
 
-    <EditText
-        android:id="@+id/age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:hint="age"
-        android:textColor="@color/black"
-        android:textColorHint="#403E3E"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/name"
-        tools:layout_editor_absoluteX="20dp" />
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:elevation="5dp"
+                android:hint="email"
+                android:inputType="textEmailAddress"
+                android:textColor="#000000"
+                android:textColorHint="#808080"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/age"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/get_user_data_bottom"
-        android:layout_width="250dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="25dp"
-        android:backgroundTint="#888787"
-        android:gravity="center"
-        android:padding="15dp"
-        android:text="Sign Up"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@id/password"
-        app:layout_constraintStart_toStartOf="@id/password"
-        app:layout_constraintTop_toBottomOf="@id/password"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1dp" />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:hint="enter_name"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:textColorHint="#808080"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:hint="enter_password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="#808080"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@id/name"
+                app:layout_constraintStart_toStartOf="@id/name"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                tools:ignore="TextFields" />
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:hint="age"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:textColorHint="#808080"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/name"
+                tools:layout_editor_absoluteX="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/get_user_data_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginHorizontal="50dp"
+                android:backgroundTint="#888787"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="@id/password"
+                app:layout_constraintStart_toStartOf="@id/password"
+                app:layout_constraintTop_toBottomOf="@id/password"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
