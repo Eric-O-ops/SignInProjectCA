@@ -106,5 +106,15 @@
         android:textStyle="bold"
         android:textColor="#005CCC"/>
 
+    <Button
+        android:id="@+id/bottom_to_pokemon_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:text="pokemosns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

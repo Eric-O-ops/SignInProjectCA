@@ -1,7 +1,7 @@
 package com.eric.signinprojectca.presentation.ui.fragments.userinfo
 
 import androidx.lifecycle.ViewModel
-import com.eric.signinprojectca.domain.usecases.GetUserDataUseCase
+import com.eric.signinprojectca.domain.usecases.user.GetUserDataUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

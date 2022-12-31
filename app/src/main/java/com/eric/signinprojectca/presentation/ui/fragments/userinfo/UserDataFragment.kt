@@ -1,33 +1,35 @@
 package com.eric.signinprojectca.presentation.ui.fragments.userinfo
 
-import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.eric.signinprojectca.R
 import com.eric.signinprojectca.databinding.FragmentUserDataBinding
+import com.eric.signinprojectca.navigate
+import com.eric.signinprojectca.presentation.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class UserDataFragment : Fragment(R.layout.fragment_user_data) {
+class UserDataFragment :
+    BaseFragment<FragmentUserDataBinding, UserDataViewModel>(R.layout.fragment_user_data) {
 
-    private val binding by viewBinding(FragmentUserDataBinding::bind)
-    private val viewModel: UserDataViewModel by viewModels()
+    override val binding by viewBinding(FragmentUserDataBinding::bind)
+    override val viewModel: UserDataViewModel by viewModels()
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun setupListener() = with(binding) {
 
-        setupListener()
+        showView()
+        goToPokemonFragment()
+
     }
 
-    private fun setupListener() = with(binding) {
+    private fun showView() = with(binding) {
         getUserDataBottom.setOnClickListener {
-            binding.textHint.visibility = View.GONE
-            binding.age.visibility = View.VISIBLE
-            binding.email.visibility = View.VISIBLE
-            binding.name.visibility = View.VISIBLE
-            binding.password.visibility = View.VISIBLE
+            textHint.visibility = View.GONE
+            age.visibility = View.VISIBLE
+            email.visibility = View.VISIBLE
+            name.visibility = View.VISIBLE
+            password.visibility = View.VISIBLE
 
             viewModel.getData().apply {
                 email.text = "email: $userEmail"
@@ -35,6 +37,12 @@ class UserDataFragment : Fragment(R.layout.fragment_user_data) {
                 password.text = "password: $userPassword"
                 name.text = "name: $userName"
             }
+        }
+    }
+
+    private fun goToPokemonFragment() {
+        binding.bottomToPokemonFragment.setOnClickListener {
+            navigate(R.id.action_userDataFragment_to_pokemonFragment)
         }
     }
 }

@@ -1,26 +1,26 @@
 
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id(Plugins.application)
+    id(Plugins.kotlinAndroid)
 
     // Kapt
-    id ("kotlin-kapt")
+    kotlin(Plugins.kapt)
     // Hilt
-    id ("dagger.hilt.android.plugin")
+    id (Plugins.hilt)
 }
 
 android {
-    namespace = "com.eric.signinprojectca"
-    compileSdk = 33
+    namespace = Config.applicationId
+    compileSdk = Config.compileAndTargetSdk
 
     defaultConfig {
-        applicationId = "com.eric.signinprojectca"
-        minSdk = 24
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Config.applicationId
+        minSdk = Config.minSdk
+        targetSdk = Config.compileAndTargetSdk
+        versionCode = Config.versionCode
+        versionName = Config.versionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = Config.testInstrumentationRunner
     }
 
     buildTypes {
@@ -36,7 +36,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Config.jvmTarget
     }
 
     buildFeatures.viewBinding = true
@@ -45,10 +45,14 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.5.1")
-    implementation("com.google.android.material:material:1.7.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    // Core
+    implementation(Dependencies.Core.core)
+    // Appcompat
+    implementation(Dependencies.UIComponents.appcompat)
+    // Material
+    implementation(Dependencies.UIComponents.material)
+    // Constraint layout
+    implementation(Dependencies.UIComponents.constraintLayout)
 
     // ViewBinding Property Delegate
     val view_binding_property_delegate = "1.4.7"
@@ -58,17 +62,31 @@ dependencies {
     val nav_version = "2.5.2"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
 
-    //kotlin_activity
-    val activity_version = "1.3.0"
-    implementation("androidx.activity:activity-ktx:$activity_version")
-
-    //kotlin_fragment
-    val fragment_version = "1.3.6"
-    implementation("androidx.fragment:fragment-ktx:$fragment_version")
-
     //Hilt
     val hilt_version = "2.42"
     implementation("com.google.dagger:hilt-android:$hilt_version")
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9")
+
+    // Retrofit 2
+    val retrofit_version = "2.9.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofit_version")
+
+    // Kotlin_activity
+    val activity_version = "1.3.0"
+    implementation("androidx.activity:activity-ktx:$activity_version")
+
+    // Kotlin_fragment
+    val fragment_version = "1.3.6"
+    implementation("androidx.fragment:fragment-ktx:$fragment_version")
+
+    // OkHttp
+    implementation("com.squareup.okhttp3:okhttp-bom:5.0.0-alpha.6")
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
 
 }

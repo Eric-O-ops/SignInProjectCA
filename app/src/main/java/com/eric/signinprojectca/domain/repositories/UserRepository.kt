@@ -1,10 +1,10 @@
 package com.eric.signinprojectca.domain.repositories
 
-import com.eric.signinprojectca.models.user.UserDataModel
+import com.eric.signinprojectca.data.local.models.UserDataModel
 
 interface UserRepository {
 
-    fun savaData(userDataModel: UserDataModel)
+    fun savaData(userModel: UserDataModel)
 
     fun getData(): UserDataModel
 }

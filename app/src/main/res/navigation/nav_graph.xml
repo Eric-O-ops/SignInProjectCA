@@ -18,5 +18,14 @@
         android:id="@+id/userDataFragment"
         android:name="com.eric.signinprojectca.presentation.ui.fragments.userinfo.UserDataFragment"
         android:label="fragment_user_data"
-        tools:layout="@layout/fragment_user_data" />
+        tools:layout="@layout/fragment_user_data" >
+        <action
+            android:id="@+id/action_userDataFragment_to_pokemonFragment"
+            app:destination="@id/pokemonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pokemonFragment"
+        android:name="com.eric.signinprojectca.presentation.ui.fragments.pokemon.PokemonFragment"
+        android:label="fragment_pokemon"
+        tools:layout="@layout/fragment_pokemon" />
 </navigation>

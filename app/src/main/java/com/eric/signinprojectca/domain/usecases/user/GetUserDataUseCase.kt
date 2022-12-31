@@ -1,4 +1,4 @@
-package com.eric.signinprojectca.domain.usecases
+package com.eric.signinprojectca.domain.usecases.user
 
 import com.eric.signinprojectca.domain.repositories.UserRepository
 import javax.inject.Inject
