@@ -23,7 +23,7 @@ object Plugins {
     const val kotlinAndroid = "org.jetbrains.kotlin.android"
     const val kapt = "kapt"
     const val androidLibrary = "com.android.library"
-    const val hilt = "com.google.dagger.hilt.android.plugin"
+    const val hilt = "com.google.dagger.hilt.android"
 }
 
 object Dependencies {

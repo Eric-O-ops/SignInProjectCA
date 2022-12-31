@@ -47,46 +47,43 @@ dependencies {
 
     // Core
     implementation(Dependencies.Core.core)
+
     // Appcompat
     implementation(Dependencies.UIComponents.appcompat)
+
     // Material
     implementation(Dependencies.UIComponents.material)
+
     // Constraint layout
     implementation(Dependencies.UIComponents.constraintLayout)
 
     // ViewBinding Property Delegate
-    val view_binding_property_delegate = "1.4.7"
-    implementation("com.github.kirich1409:viewbindingpropertydelegate-noreflection:$view_binding_property_delegate")
+    implementation(Dependencies.ViewBindingPropertyDelegate.viewBindingDelegate)
 
     // Navigation
-    val nav_version = "2.5.2"
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation(Dependencies.Navigation.navigation)
 
     //Hilt
-    val hilt_version = "2.42"
-    implementation("com.google.dagger:hilt-android:$hilt_version")
-    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
+    implementation(Dependencies.DaggerHilt.daggerHilt)
+    kapt(Dependencies.DaggerHilt.hiltAndroidKapt)
 
     // Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9")
+    implementation(Dependencies.Coroutines.coroutinesAndroid)
+    implementation (Dependencies.Coroutines.coroutinesCore)
 
     // Retrofit 2
-    val retrofit_version = "2.9.0"
-    implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
-    implementation("com.squareup.retrofit2:converter-gson:$retrofit_version")
+    implementation(Dependencies.Retrofit2.retrofit)
+    implementation(Dependencies.Retrofit2.gsonConverter)
 
     // Kotlin_activity
-    val activity_version = "1.3.0"
-    implementation("androidx.activity:activity-ktx:$activity_version")
+    implementation(Dependencies.KotlinActivity.activityKtx)
 
     // Kotlin_fragment
-    val fragment_version = "1.3.6"
-    implementation("androidx.fragment:fragment-ktx:$fragment_version")
+    implementation(Dependencies.KotlinFragment.fragmentKtx)
 
     // OkHttp
-    implementation("com.squareup.okhttp3:okhttp-bom:5.0.0-alpha.6")
-    implementation("com.squareup.okhttp3:okhttp")
-    implementation("com.squareup.okhttp3:logging-interceptor")
+    implementation(Dependencies.OkHttp.okhttpBom)
+    implementation(Dependencies.OkHttp.okhttp)
+    implementation(Dependencies.OkHttp.loggingInterceptor)
 
 }
