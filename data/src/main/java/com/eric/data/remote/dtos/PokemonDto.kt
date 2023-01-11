@@ -14,5 +14,3 @@ fun PokemonDto.toDomain() = PokemonDomain(
     name = name,
     url = url
 )
-
-

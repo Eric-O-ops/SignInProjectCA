@@ -52,13 +52,6 @@ dependencies {
     implementation(Dependencies.OkHttp.okhttp)
     implementation(Dependencies.OkHttp.loggingInterceptor)
 
-    // Coroutines
-    implementation(Dependencies.Coroutines.coroutinesAndroid)
-    implementation(Dependencies.Coroutines.coroutinesCore)
-
-    //Inject
-    implementation(Dependencies.Inject.inject)
-
     // Domain
     implementation(project(":domain"))
 }

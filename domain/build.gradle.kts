@@ -11,9 +11,9 @@ java {
 dependencies {
 
     // Coroutines
-    implementation(Dependencies.Coroutines.coroutinesAndroid)
-    implementation(Dependencies.Coroutines.coroutinesCore)
+    api(Dependencies.Coroutines.coroutinesAndroid)
+    api(Dependencies.Coroutines.coroutinesCore)
 
     //Inject
-    implementation(Dependencies.Inject.inject)
+    api(Dependencies.Inject.inject)
 }

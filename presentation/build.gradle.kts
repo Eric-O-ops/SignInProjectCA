@@ -71,13 +71,6 @@ dependencies {
     // Kotlin_fragment
     implementation(Dependencies.KotlinFragment.fragmentKtx)
 
-    // Coroutines
-    implementation(Dependencies.Coroutines.coroutinesAndroid)
-    implementation(Dependencies.Coroutines.coroutinesCore)
-
-    //Inject
-    implementation(Dependencies.Inject.inject)
-
     //Hilt
     implementation(Dependencies.DaggerHilt.daggerHilt)
     kapt(Dependencies.DaggerHilt.hiltAndroidKapt)
