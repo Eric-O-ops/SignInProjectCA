@@ -13,6 +13,9 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "SignInProjectCA"
-include (
+include(
     ":app"
 )
+include(":data")
+include(":domain")
+include(":presentation")

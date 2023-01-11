@@ -15,6 +15,11 @@ object Versions {
     const val kotlinActivity = "1.3.0"
     const val fragmentKtx = "1.3.6"
     const val okhttpBom = "5.0.0-alpha.6"
+
+    // Tests
+    const val junit = "4.13.2"
+    const val extJUnit = "1.1.5"
+    const val espressoCore = "3.5.1"
 }
 
 object Plugins {
@@ -24,6 +29,10 @@ object Plugins {
     const val kapt = "kapt"
     const val androidLibrary = "com.android.library"
     const val hilt = "com.google.dagger.hilt.android"
+
+    // Domain
+    const val javaLibrary = "java-library"
+    const val kotlinJVM = "org.jetbrains.kotlin.jvm"
 }
 
 object Dependencies {
@@ -72,8 +81,10 @@ object Dependencies {
 
     object Coroutines {
 
-        const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesAndroid}"
-        const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesCore}"
+        const val coroutinesAndroid =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesAndroid}"
+        const val coroutinesCore =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesCore}"
     }
 
 
@@ -90,5 +101,17 @@ object Dependencies {
     object KotlinFragment {
 
         const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtx}"
+    }
+
+    object Inject {
+
+        const val inject = "javax.inject:javax.inject:1"
+    }
+
+    object Tests {
+
+        const val junit = "junit:junit:${Versions.junit}"
+        const val extJUnit = "androidx.test.ext:junit:${Versions.extJUnit}"
+        const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
     }
 }

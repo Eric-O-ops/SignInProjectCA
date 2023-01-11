@@ -1,6 +1,6 @@
 package com.eric.signinprojectca.di
 
-import com.eric.signinprojectca.data.remote.RetrofitClient
+import com.eric.data.remote.RetrofitClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
